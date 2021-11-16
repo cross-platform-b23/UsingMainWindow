@@ -14,23 +14,26 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+protected:
+    void initTable();
+    void addTableData(const QString& strNama, const QString& strEmail);
 
 private slots:
     void on_actionNew_triggered();
-
     void on_actionOpen_triggered();
-
     void on_action_About_triggered();
-
     void on_actionExit_triggered();
-
     void on_actionCalculator_triggered();
-
     void on_actionSort_triggered();
-
-    void on_actionSort2_triggered();
-
     void on_actionFind_triggered();
+
+    void on_actionAdd_Data_triggered();
+
+    void on_actionDelete_triggered();
+
+    void on_tableWidget_cellDoubleClicked(int row, int column);
+
+    void on_tableWidget_cellClicked(int row, int column);
 
 private:
     Ui::MainWindow *ui;

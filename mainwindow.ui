@@ -13,7 +13,24 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
-  <widget class="QWidget" name="centralwidget"/>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTableWidget" name="tableWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>50</y>
+      <width>771</width>
+      <height>411</height>
+     </rect>
+    </property>
+    <property name="rowCount">
+     <number>0</number>
+    </property>
+    <property name="columnCount">
+     <number>0</number>
+    </property>
+   </widget>
+  </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
@@ -36,9 +53,10 @@
     <property name="title">
      <string>&amp;Edit</string>
     </property>
+    <addaction name="actionAdd_Data"/>
+    <addaction name="actionDelete"/>
     <addaction name="actionFind"/>
     <addaction name="actionSort"/>
-    <addaction name="actionSort2"/>
    </widget>
    <widget class="QMenu" name="menuHelp">
     <property name="title">
@@ -71,6 +89,8 @@
    <addaction name="actionNew"/>
    <addaction name="actionOpen"/>
    <addaction name="actionSort"/>
+   <addaction name="actionAdd_Data"/>
+   <addaction name="actionDelete"/>
   </widget>
   <action name="actionNew">
    <property name="icon">
@@ -128,9 +148,22 @@
     <string>Sort..</string>
    </property>
   </action>
-  <action name="actionSort2">
+  <action name="actionAdd_Data">
+   <property name="icon">
+    <iconset resource="usingMainWindow.qrc">
+     <normaloff>:/icons/copy.png</normaloff>:/icons/copy.png</iconset>
+   </property>
    <property name="text">
-    <string>Sort2...</string>
+    <string>Add Data..</string>
+   </property>
+  </action>
+  <action name="actionDelete">
+   <property name="icon">
+    <iconset resource="usingMainWindow.qrc">
+     <normaloff>:/icons/cut.png</normaloff>:/icons/cut.png</iconset>
+   </property>
+   <property name="text">
+    <string>Delete</string>
    </property>
   </action>
  </widget>

@@ -10,22 +10,22 @@ CONFIG += c++11
 
 SOURCES += \
     dialog.cpp \
+    inputdatadialog.cpp \
     main.cpp \
     mainwindow.cpp \
-    sortdialog.cpp \
-    sortdialog2.cpp
+    sortdialog.cpp
 
 HEADERS += \
     dialog.h \
+    inputdatadialog.h \
     mainwindow.h \
-    sortdialog.h \
-    sortdialog2.h
+    sortdialog.h
 
 FORMS += \
     dialog.ui \
+    inputdatadialog.ui \
     mainwindow.ui \
-    sortdialog.ui \
-    sortdialog2.ui
+    sortdialog.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
