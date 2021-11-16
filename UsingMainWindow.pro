@@ -11,17 +11,26 @@ CONFIG += c++11
 SOURCES += \
     dialog.cpp \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    sortdialog.cpp \
+    sortdialog2.cpp
 
 HEADERS += \
     dialog.h \
-    mainwindow.h
+    mainwindow.h \
+    sortdialog.h \
+    sortdialog2.h
 
 FORMS += \
     dialog.ui \
-    mainwindow.ui
+    mainwindow.ui \
+    sortdialog.ui \
+    sortdialog2.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+RESOURCES += \
+    usingMainWindow.qrc

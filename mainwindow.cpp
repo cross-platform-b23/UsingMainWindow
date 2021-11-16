@@ -1,6 +1,8 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "dialog.h"
+#include "sortdialog.h"
+#include "sortdialog2.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -45,5 +47,27 @@ void MainWindow::on_actionCalculator_triggered()
     Dialog dlg;
     dlg.exec();
     qDebug("Result: %.2f", dlg.getResult());
+}
+
+
+void MainWindow::on_actionSort_triggered()
+{
+    qDebug("on_actionSort_triggered");
+    statusBar()->showMessage("Ini utk membuka menu dialog Sort", 5*1000);
+    SortDialog dlg;
+    dlg.exec();
+}
+
+
+void MainWindow::on_actionSort2_triggered()
+{
+    SortDialog2 dlg;
+    dlg.exec();
+}
+
+
+void MainWindow::on_actionFind_triggered()
+{
+
 }
 

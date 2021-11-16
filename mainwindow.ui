@@ -37,6 +37,8 @@
      <string>&amp;Edit</string>
     </property>
     <addaction name="actionFind"/>
+    <addaction name="actionSort"/>
+    <addaction name="actionSort2"/>
    </widget>
    <widget class="QMenu" name="menuHelp">
     <property name="title">
@@ -66,15 +68,35 @@
    <attribute name="toolBarBreak">
     <bool>false</bool>
    </attribute>
+   <addaction name="actionNew"/>
+   <addaction name="actionOpen"/>
+   <addaction name="actionSort"/>
   </widget>
   <action name="actionNew">
+   <property name="icon">
+    <iconset resource="usingMainWindow.qrc">
+     <normaloff>:/icons/new.png</normaloff>:/icons/new.png</iconset>
+   </property>
    <property name="text">
     <string>&amp;New...</string>
    </property>
+   <property name="statusTip">
+    <string>Ini untuk new file</string>
+   </property>
   </action>
   <action name="actionOpen">
+   <property name="icon">
+    <iconset resource="usingMainWindow.qrc">
+     <normaloff>:/icons/open.png</normaloff>:/icons/open.png</iconset>
+   </property>
    <property name="text">
     <string>&amp;Open...</string>
+   </property>
+   <property name="toolTip">
+    <string>Open file</string>
+   </property>
+   <property name="statusTip">
+    <string>Ini adalah menu open file</string>
    </property>
   </action>
   <action name="actionExit">
@@ -97,7 +119,23 @@
     <string>Find...</string>
    </property>
   </action>
+  <action name="actionSort">
+   <property name="icon">
+    <iconset resource="usingMainWindow.qrc">
+     <normaloff>:/icons/YouTubeMusic.ico</normaloff>:/icons/YouTubeMusic.ico</iconset>
+   </property>
+   <property name="text">
+    <string>Sort..</string>
+   </property>
+  </action>
+  <action name="actionSort2">
+   <property name="text">
+    <string>Sort2...</string>
+   </property>
+  </action>
  </widget>
- <resources/>
+ <resources>
+  <include location="usingMainWindow.qrc"/>
+ </resources>
  <connections/>
 </ui>
